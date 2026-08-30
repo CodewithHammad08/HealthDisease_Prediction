@@ -74,7 +74,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("https://heart-disease-prediction-9a0q.onrender.com/predict", {
+      const response = await fetch("https://healthdisease-prediction.onrender.com//predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ function App() {
       setResult(data.prediction);
     } catch (err) {
       console.error("Prediction Error:", err);
-      setError("Unable to connect to prediction API. Make sure Flask is running on https://heart-disease-prediction-9a0q.onrender.com.");
+      setError("Unable to connect to prediction API. Make sure Flask is running on https://healthdisease-prediction.onrender.com/.com.");
     } finally {
       setIsLoading(false);
     }
