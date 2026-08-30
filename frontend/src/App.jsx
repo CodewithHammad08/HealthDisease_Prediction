@@ -74,7 +74,7 @@ function App() {
     setIsLoading(true);
 
     try {
-      const response = await fetch("http://127.0.0.1:5000/predict", {
+      const response = await fetch("https://heart-disease-prediction-9a0q.onrender.com/predict", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -98,7 +98,7 @@ function App() {
       setResult(data.prediction);
     } catch (err) {
       console.error("Prediction Error:", err);
-      setError("Unable to connect to prediction API. Make sure Flask is running on http://127.0.0.1:5000.");
+      setError("Unable to connect to prediction API. Make sure Flask is running on https://heart-disease-prediction-9a0q.onrender.com.");
     } finally {
       setIsLoading(false);
     }
